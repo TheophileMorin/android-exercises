@@ -2,5 +2,7 @@
     <string name="app_name">Library</string>
     <string name="action_settings">Settings</string>
     <string name="action_see">See book</string>
+    <string name="date_btn">select date</string>
+    <string name="hour_btn">select time</string>
     <string name="text_success">Book activity ;)</string>
 </resources>
