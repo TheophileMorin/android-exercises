@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 public class LibraryActivity extends AppCompatActivity {
 
     private CheckBox checkBox;
+    public String CGUvalidated = "CGUvalidated";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +24,14 @@ public class LibraryActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        // TODO save check box state
-
+        outState.putBoolean(CGUvalidated, checkBox.isChecked());
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-
-        // TODO restore check box
+        checkBox.setChecked( savedInstanceState.getBoolean(CGUvalidated, false));
     }
 
     @Override
