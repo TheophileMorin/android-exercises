@@ -17,7 +17,6 @@ public class BookAdapter extends BaseAdapter {
 
     public BookAdapter(Context context, List<Book> books) {
         this.books = books;
-        // TODO LayoutInflater.from()
         inflater = LayoutInflater.from(context);
     }
 

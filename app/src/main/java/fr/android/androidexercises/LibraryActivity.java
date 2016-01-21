@@ -19,7 +19,6 @@ public class LibraryActivity extends AppCompatActivity {
 
         List<Book> books = getBooks();
 
-        // TODO findViewById() and setAdapter()
         ListView lv = (ListView) findViewById(R.id.bookListView);
         lv.setAdapter(new BookAdapter(this,books));
     }
