@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class BookItemView extends LinearLayout {
-
+public class BookItemView /*extends LinearLayout */{
+/*
     private TextView nameTextView;
     private TextView priceTextView;
 
@@ -33,5 +33,5 @@ public class BookItemView extends LinearLayout {
     public void bindView(Book book) {
         nameTextView.setText(book.name);
         priceTextView.setText(String.valueOf(book.price));
-    }
+    }*/
 }
