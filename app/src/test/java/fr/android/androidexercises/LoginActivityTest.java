@@ -1,10 +1,13 @@
 package fr.android.androidexercises;
 
+import junit.framework.Assert;
+
 import org.assertj.android.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.shadows.ShadowToast;
 
 @RunWith(CustomRobolectricTestRunner.class)
 public class LoginActivityTest {
@@ -24,8 +27,10 @@ public class LoginActivityTest {
 
     @Test
     public void testMessage() throws Exception {
-        Assertions.assertThat(activity.loginLayout).isVisible();
-        Assertions.assertThat(activity.loggedText).isGone();
+        activity.message(R.string.action_login);
+        //then
+        String textToast = ShadowToast.getTextOfLatestToast();
+        Assert.assertEquals(textToast, "log me in");
     }
 
 

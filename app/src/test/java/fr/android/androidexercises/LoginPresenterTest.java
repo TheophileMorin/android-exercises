@@ -14,6 +14,8 @@ public class LoginPresenterTest {
     LoginActivity activity;
     @InjectMocks
     LoginPresenter loginPresenter;
+
+
     @Test
     public void password_should_be_valid() throws Exception {
         // Given
@@ -30,10 +32,10 @@ public class LoginPresenterTest {
         // When
         loginPresenter.checkCredentials("a");
         // Then
-        Mockito.verify(activity).logged();
-        Mockito.verify(activity).message(R.string.text_logged);
         Mockito.verify(activity).notLogged();
         Mockito.verify(activity).message(R.string.notLogged);
     }
+
+
 
 }
